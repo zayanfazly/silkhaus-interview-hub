@@ -16,7 +16,8 @@ export type FormData = {
 
 export type DynamicFormProps = {
  fields: FormField[],
- onSubmit: (formData: FormData) => void
+ onSubmit: (formData: FormData) => void,
+ isLoading?: boolean
 }
 
 export const DynamicForm: FC<DynamicFormProps> = () => {

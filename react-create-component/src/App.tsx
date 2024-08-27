@@ -1,9 +1,9 @@
+import { API } from './api'
 import './App.css'
 import {
   DynamicForm,
   type FormField
 } from './components/dynamic-form'
-import { Select } from './components/select'
 
 const formFields: FormField[] = [
   {
@@ -28,11 +28,15 @@ const formFields: FormField[] = [
 ]
 
 function App() {
+
+  const onSubmit = (data: FormData) => {
+    // use API.submitForm functions here
+  }
+
   return (
     <>
       <div>
-        <DynamicForm fields={formFields} onSubmit={(data) => console.log(data)}></DynamicForm>
-        <Select options={[{ label: 'Male', value: 'M' }, { label: 'Female', value: 'F' }]}></Select>
+        <DynamicForm fields={formFields}></DynamicForm>
       </div>
     </>
   )
