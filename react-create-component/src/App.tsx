@@ -2,6 +2,7 @@ import { API } from './api'
 import './App.css'
 import {
   DynamicForm,
+  FormData,
   type FormField
 } from './components/dynamic-form'
 
@@ -31,12 +32,13 @@ function App() {
 
   const onSubmit = (data: FormData) => {
     // use API.submitForm functions here
+    console.log(data)
   }
 
   return (
     <>
       <div>
-        <DynamicForm fields={formFields}></DynamicForm>
+        <DynamicForm fields={formFields} onSubmit={onSubmit}></DynamicForm>
       </div>
     </>
   )
